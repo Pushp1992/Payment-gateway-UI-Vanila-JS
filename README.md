@@ -26,5 +26,7 @@ Open [http://localhost:8080](http://localhost:8080) with your browser to see the
 9. validity date will be indented by space every 2 digit. 
 10. For validity date (First 2 digit are always Month and last 2 digit are always year), which is validated at client.
 11. Card can be Saved, fetched and removed.
+12. Auto-tab: cursor should jump to next field on successful completion of
+one field.
 
 ## Learn More

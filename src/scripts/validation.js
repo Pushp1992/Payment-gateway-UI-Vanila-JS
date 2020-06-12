@@ -28,12 +28,15 @@ const validateCardNumber = function (e) {
     } else {
         cardType.innerHTML = null
     }
+
+    // taking cursor to next input field
+    if (cardNumber.length === 23) { document.getElementById("validity").focus() };
 };
 
 const validateCardValidity = function (event) {
     event.preventDefault();
 
-    // Add / every after 2 digit in card
+    // Add '/' every after 2 digit in card
     document.getElementById('validity').addEventListener('input', function (e) {
         e.target.value = e.target.value.replace(/\s/g, '').replace(/(\d{2})/g, '$1 ').trim();
     });
@@ -48,9 +51,12 @@ const validateCardValidity = function (event) {
     if (validityNumber.length === 2 && validityNumber > "12") {
         window.alert(`Inavlid Month: ${validityNumber}`)
     }
-    if (validityNumber.length > 2 && year < "20") {
+    if (validityNumber.length >=4 && year < "20") {
         window.alert(`Inavlid Year: ${year}`)
     }
+
+    // taking cursor to next input field
+    if (validityNumber.length === 5) { document.getElementById("cvv").focus() };
 
 };
 
@@ -69,4 +75,7 @@ const validateCvv = function (event) {
         window.alert(`Invalid CVV for ${cardType}. \n It Should be of 3 Digit`);
         return false;
     }
+
+    // taking cursor to next input field
+    if (cvvValue.length === 4) { document.getElementById("cardHolderName").focus() };
 }
