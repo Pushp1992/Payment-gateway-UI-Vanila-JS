@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Credit Card Validation</title>
+    <link href="../styles/card.css" rel="stylesheet"/>
+  </head>
+  <body>
+
+    <div id="user-form">
+        <form>
+            <div class="form-group">
+                <label>Please Enter Your Card Details Below</label>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="card-no" id="cardNumber" 
+                placeholder="Enter card number" maxlength="23" onkeyup="validateCardNumber(event)" />
+                <div id="cardType"></div>
+               
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="valid-thru" id="validity"
+                onkeyup="validateCardValidity(event)" maxlength="5" placeholder="Valid Thru(MM/YY)" />
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="password" name="card-cvv" id="cvv" placeholder="CVV" 
+                onblur="validateCvv(event)" maxlength="4"/>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="card-holder-name" id="cardHolderName" placeholder="Enter Your Name as on Card" />
+            </div>
+            <div class="form-group">
+                <button id="save-btn" name="saveDetails" onclick="saveCard(event)">Save Card</button>
+            </div>
+        </form>
+        <!-- <button id="save-btn" name="saveDetails" onclick="saveCard(event)">Save Card</button> -->
+    </div>
+
+    <div id="saved-form-list"></div>
+    
+    <!-- <script src="../scripts/card.js"></script> -->
+  </body>
+</html>
