@@ -16,9 +16,10 @@ const saveCard = function (event) {
         window.alert("All fields are mandatory. Please check")
         return false;
     }
-    userCardList.push(userDetails)
-    window.localStorage.setItem('cardDetails', JSON.stringify(userCardList))
-    window.alert("Card Saved Successfully! \n Please refresh")
+    userCardList.push(userDetails);
+    window.localStorage.setItem('cardDetails', JSON.stringify(userCardList));
+    document. getElementById("myForm"). reset();
+    window.alert("Card Saved Successfully! \n Please refresh");
 
 };
 

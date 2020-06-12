@@ -18,7 +18,7 @@ const validateCardNumber = function (e) {
     // CHeck and Display Card Type
     if (cardFirstDigit === "4") {
         cardType.innerHTML = "VISA CARD";
-        cardType.setAttribute("value", cardType.innerHTML)
+        cardType.setAttribute("value", cardType.innerHTML);
     } else if (cardFirstDigit === "5") {
         cardType.innerHTML = "MASTER CARD"
     } else if (cardFirstDigit === "6") {
@@ -48,7 +48,7 @@ const validateCardValidity = function (event) {
     if (validityNumber.length === 2 && validityNumber > "12") {
         window.alert(`Inavlid Month: ${validityNumber}`)
     }
-    if (validityNumber.length === 5 && year < "20") {
+    if (validityNumber.length >= 4 && year < "20") {
         window.alert(`Inavlid Year: ${year}`)
     }
 
