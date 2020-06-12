@@ -1,0 +1,17 @@
+#user-form {
+    width: 50%;
+    text-align: center;
+    border-style: outset;
+    background-color: aliceblue;
+    /* background-color: whitesmoke; */
+}
+.form-group {
+    padding: 15px;
+    color: black;
+}
+
+.form-control {
+    width: 30%;
+    height: 40%;
+}
+

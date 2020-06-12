@@ -5,9 +5,3 @@ fetch("./src/view/card.html")
     .then(data => {
         document.querySelector("card-template").innerHTML = data;
     });
-
-// const callClick = function () {
-//     event.preventDefault()
-
-//     window.alert('clicked')
-// }
