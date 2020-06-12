@@ -48,7 +48,7 @@ const validateCardValidity = function (event) {
     if (validityNumber.length === 2 && validityNumber > "12") {
         window.alert(`Inavlid Month: ${validityNumber}`)
     }
-    if (validityNumber.length >= 4 && year < "20") {
+    if (validityNumber.length > 2 && year < "20") {
         window.alert(`Inavlid Year: ${year}`)
     }
 
